@@ -1,6 +1,6 @@
-# Integration_TB3_Poppy_Vision_GRP1
+# Integration_TB3_Poppy_Vision
 
-Dépôt du groupe 1 concernant l'intégration finale
+Le projet consiste à utilser une caméra montée sur le mini bras robotique "Poppy Jr" afin de reconnaître le numéro inscrit sur 4 cubes en papier. En fonction du numéro inscrit (1 ou 2), Poppy Jr charge le cube sur le Turtlebot 3 et lui transmet le numéro inscrit sur le cube chargé. En fonction de ce numéro, TB3 se dirige vers l'une des deux zones de déchargement et revient vers la zone de chargement. Lorsqu'il y arrive, il transmet l'information à Poppy Jr qui charge le prochain cube. Ce processus est répété jusqu'à ce que les 4 cubes en papier soient livrés au niveau des zones de déchargement. 
 
 # Commande de démarrage
 
@@ -30,12 +30,12 @@ Nous avons utilisés les 4 paramètres suivant :
 # Compte-rendu intégration
 
 La programmation des différents nodes ainsi que leur synchronisation s'est faite en suivant le diagramme de séquence et s'est déroulée sans encombre.
-Nous avons eu quelques problèmes pour record et rejouer les différents mouvements de Poppy lundi à cause d'erreurs liés au réseau.
-Toutefois, le problème majeur que nous avons rencontré est lié aux erreurs de positionnement que rencontre TB3 et sa navigation tout au long de la démonstration. Nous avons dû charger au moins une fois le cube à la main durant chaque démonstration car TB3 se décale au niveau de la zone de chargement au fur et à mesure des aller-retour. D'après ce que nous avons compris, ces erreurs sont liées au patinage et sont donc renvoyées par l'odométrie. Elles sont aussi liées aux erreurs de prédictions de localisation générées par les données du lidar. On pensait donc pouvoir les réduire en augmentant le refresh rate du lidar et diminuer la vitesse linéaire et rotationnelle de TB3. Malheuresement, nous n'avons pas eu le temps/les connaissances pour faire les modifications et nous avons préféré ajouter des points de passages à proximité de la zone de chargement afin d'améliorer la précision de TB3.
+J'ai eu quelques problèmes pour record et rejouer les différents mouvements de Poppy lundi à cause d'erreurs liés au réseau.
+Toutefois, le problème majeur que j'ai rencontré est lié aux erreurs de positionnement que rencontre TB3 et sa navigation tout au long de la démonstration. J'ai dû charger au moins une fois le cube à la main durant chaque démonstration car TB3 se décale au niveau de la zone de chargement au fur et à mesure des aller-retour. D'après ce que j'ai compris, ces erreurs sont liées au patinage et sont donc renvoyées par l'odométrie. Elles sont aussi liées aux erreurs de prédictions de localisation générées par les données du lidar. Je pensais donc pouvoir les réduire en augmentant le refresh rate du lidar et diminuer la vitesse linéaire et rotationnelle de TB3. Malheuresement, je n'ai pas eu le temps/les connaissances pour faire les modifications et j'ai préféré ajouter des points de passages à proximité de la zone de chargement afin d'améliorer la précision de TB3.
 
 # Livrables
 
-Nous vous avons envoyé une vidéo montrant le bon déroulement du chargement de TB3 lorsqu'il est immobile ainsi qu'une vidéo montrant l'intégration finale. Nous avons préféré vous envoyer celle-ci car nous avons eu à charger TB3 qu'une seule fois à la main. Toutefois, elle se termine par une erreur de liée au local planner. Nous avons fait d'autres tests sans erreur de navigation mais avec des erreurs de positionnement dans la zone de chargement qui nécessite notre intervention pour le chargement.
+J'ai envoyé une vidéo montrant le bon déroulement du chargement de TB3 lorsqu'il est immobile ainsi qu'une vidéo montrant l'intégration finale. J'ai préféré vous envoyer celle-ci car je n'ai eu à charger TB3 qu'une seule fois à la main. Toutefois, elle se termine par une erreur liée au local planner. J'ai fait d'autres tests sans erreur de navigation mais avec des erreurs de positionnement dans la zone de chargement qui nécessite mon intervention pour le chargement.
 
 Vous trouverez aussi une vidéo montrant l'execution du code à travers les terminaux. Elle se déroule en condition réelle, seule la navigation du robot a été désactivée pour diminuer la longueur de la vidéo.
 Sur la première ligne des terminaux se trouvent les différents roslaunch liés aux moteurs de Poppy et TB3 ainsi que la navigation et MoveIt. Sur la deuxième ligne, de gauche à droite, se trouvent _manipulate.py_, _simple_navigation.py_ et _nn.py_.
