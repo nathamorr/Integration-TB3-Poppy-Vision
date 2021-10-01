@@ -1,4 +1,4 @@
-# Integration_TB3_Poppy_Vision
+# Integration-TB3-Poppy-Vision
 
 Le projet consiste à utilser une caméra montée sur le mini bras robotique "Poppy Jr" afin de reconnaître le numéro inscrit sur 4 cubes en papier. En fonction du numéro inscrit (1 ou 2), Poppy Jr charge le cube sur le Turtlebot 3 et lui transmet le numéro inscrit sur le cube chargé. En fonction de ce numéro, TB3 se dirige vers l'une des deux zones de déchargement et revient vers la zone de chargement. Lorsqu'il y arrive, il transmet l'information à Poppy Jr qui charge le prochain cube. Ce processus est répété jusqu'à ce que les 4 cubes en papier soient livrés au niveau des zones de déchargement. 
 
